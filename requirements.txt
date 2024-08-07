@@ -7,3 +7,4 @@ tensorflow
 requests
 joblib
 scikit-learn
+python-dotenv
