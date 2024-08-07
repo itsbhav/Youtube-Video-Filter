@@ -1,0 +1,9 @@
+streamlit
+youtube-transcript-api
+pandas
+nltk
+numpy
+tensorflow
+requests
+joblib
+scikit-learn
