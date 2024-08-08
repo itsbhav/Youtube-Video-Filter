@@ -112,11 +112,9 @@ def dataGatherer(videoId):
     else:
         print("Some error occurred")
         return
-    transformer_=joblib.load('column_transformer.pkl')
-    # print(transformer_)
+    transformer_=joblib.load(open('column_transformer.joblib','rb'))
     dataset=transformer_.transform(dataset)
-    # print(dataset)
-    vectorizer=joblib.load('count_vectorizer.pkl')
+    vectorizer=joblib.load(open('count_vectorizer.joblib','rb'))
     x=(
     '''पर
     इन
@@ -289,7 +287,6 @@ def dataGatherer(videoId):
       word_lists=''
       for j in range(14,len(dataset[0])):
         text=str(dataset[i,j])
-#         print(text)
         text = text.lower()
         text = text.translate(str.maketrans('', '', string.punctuation))
         text = re.sub(r'\d+', '', text)
