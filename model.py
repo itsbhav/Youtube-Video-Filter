@@ -112,9 +112,11 @@ def dataGatherer(videoId):
     else:
         print("Some error occurred")
         return
-    transformer_=joblib.load('column_transformer.joblib')
+    transformer_=joblib.load('column_transformer.pkl')
+    print(transformer_)
     dataset=transformer_.transform(dataset)
-    vectorizer=joblib.load('count_vectorizer.joblib')
+    # print(dataset)
+    vectorizer=joblib.load('count_vectorizer.pkl')
     x=(
     '''पर
     इन
