@@ -59,9 +59,9 @@ def dataGatherer(videoId):
             Tags = response['items'][k]['snippet'].get('tags', "")
             Tags = " ".join(Tags)
             if(transcript=='not available'):
-                first_part=''
-                middle_part=''
-                last_part=''  
+                first_part=' '
+                middle_part=' '
+                last_part=' '  
             else:
                 transcript[0][videoId[0]] = [x['text'] for x in transcript[0][videoId[0]] if "[Music]" not in x['text'] and "[संगीत]" not in x['text']]
                 if len(transcript[0][videoId[0]]) == 0:
